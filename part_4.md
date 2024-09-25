@@ -13,7 +13,7 @@
 
 ## Troubleshooting
 
-If you run permissions issues with your Google Service Account then try these commands...
+If you run into permissions issues with your Google Service Account then try these commands...
 
 ```.sh
 gcloud projects add-iam-policy-binding h-t-d-a-f-a-t-g-c-r \
