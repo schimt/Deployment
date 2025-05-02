@@ -29,3 +29,7 @@ def health():
     return {
         "message": "sup"
     }
+
+
+
+#implement routes for each of the steps: paper retrieval, etc.
