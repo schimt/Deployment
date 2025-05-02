@@ -1,12 +1,12 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: custom-fastapi-service
+  name: dvml6-deployment-service
 spec:
   template:
     spec:
       containers:
-        - image: europe-north1-docker.pkg.dev/buoyant-idea-458413-p8/custom-fastapi/custom-fastapi:latest
+        - image: europe-north2-docker.pkg.dev/buoyant-idea-458413-p8/dvml6-deployment/dvml6-deployment:latest
           env: []
           ports:
             - containerPort: 4000

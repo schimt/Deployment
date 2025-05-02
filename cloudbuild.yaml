@@ -3,16 +3,16 @@ steps:
     args: [
       'build',
       '-f', 'Dockerfile.prod',
-      '-t', 'europe-north1-docker.pkg.dev/buoyant-idea-458413-p8/custom-fastapi/custom-fastapi:latest',
+      '-t', 'europe-north2-docker.pkg.dev/buoyant-idea-458413-p8/dvml6-deployment/dvml6-deployment:latest',
       '.'
     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-north1-docker.pkg.dev/buoyant-idea-458413-p8/custom-fastapi/custom-fastapi:latest'
+      'europe-north2-docker.pkg.dev/buoyant-idea-458413-p8/dvml6-deployment/dvml6-deployment:latest'
     ]
 
 images:
-  - 'europe-north1-docker.pkg.dev/buoyant-idea-458413-p8/custom-fastapi/custom-fastapi:latest'
+  - 'europe-north2-docker.pkg.dev/buoyant-idea-458413-p8/dvml6-deployment/dvml6-deployment:latest'
 
 
