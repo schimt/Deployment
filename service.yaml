@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/h-t-d-a-f-a-t-g-c-r/custom-fastapi/custom-fastapi:latest
-          env:
+        - image: europe-north1-docker.pkg.dev/buoyant-idea-458413-p8/custom-fastapi/custom-fastapi:latest
+          env: []
           ports:
             - containerPort: 4000
