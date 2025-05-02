@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from . import smokeTest
 
 import debugpy
 
@@ -23,7 +22,6 @@ app.add_middleware(
 
 
 
-app.include_router(smokeTest.router, prefix="/smoke-test")
 
 # Define the API endpoints
 @app.get('/')

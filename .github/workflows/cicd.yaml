@@ -1,9 +1,9 @@
 name: Deploy to Cloud Run
 
 env:
-  SERVICE_NAME: custom-fastapi-service
-  PROJECT_ID: h-t-d-a-f-a-t-g-c-r
-  DOCKER_IMAGE_URL: us-central1-docker.pkg.dev/h-t-d-a-f-a-t-g-c-r/custom-fastapi/custom-fastapi
+  SERVICE_NAME: dvml6-deployment-service  # Updated service name
+  PROJECT_ID: buoyant-idea-458413-p8     # Your Google Cloud project ID
+  DOCKER_IMAGE_URL: europe-north2-docker.pkg.dev/buoyant-idea-458413-p8/dvml6-deployment/dvml6-deployment  # Updated Docker image URL
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Configure Docker
         run: |
-          gcloud auth configure-docker us-central1-docker.pkg.dev
+          gcloud auth configure-docker europe-north2-docker.pkg.dev
 
       - name: Build and Push Docker Image
         run: |
@@ -45,5 +45,5 @@ jobs:
           gcloud run deploy $SERVICE_NAME \
             --image ${{ env.DOCKER_IMAGE_URL }}:latest \
             --platform managed \
-            --region us-east1 \
+            --region europe-north2 \
             --allow-unauthenticated
